@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiAppHotel.Views.Sobre"
+             Title="Sobre" BackgroundColor="{StaticResource Sand}">
+    <ScrollView>
+        <VerticalStackLayout Padding="26,38" Spacing="20">
+            <Border BackgroundColor="{StaticResource Forest}" StrokeThickness="0"
+                    Padding="24" StrokeShape="RoundRectangle 24">
+                <VerticalStackLayout Spacing="12">
+                    <Label Text="REFÚGIO" TextColor="#E6D6C1" FontSize="12"
+                           CharacterSpacing="3"/>
+                    <Label Text="Sobre o projeto" TextColor="White" FontSize="28"
+                           FontFamily="OpenSansSemibold"/>
+                    <Label Text="Uma proposta de aplicativo mobile para apresentação e solicitação de hospedagens."
+                           TextColor="#F4F0E8" FontSize="13"/>
+                </VerticalStackLayout>
+            </Border>
+            <Label Text="DESENVOLVIMENTO" FontSize="11" CharacterSpacing="1.4"
+                   TextColor="{StaticResource Forest}"/>
+            <Border BackgroundColor="White" Stroke="#E8E3D9" StrokeThickness="1"
+                    Padding="20" StrokeShape="RoundRectangle 20">
+                <VerticalStackLayout Spacing="14">
+                    <Grid ColumnDefinitions="Auto,*" ColumnSpacing="14">
+                        <Label Text="✦" FontSize="22" TextColor="{StaticResource Clay}"/>
+                        <VerticalStackLayout Grid.Column="1" Spacing="2">
+                            <Label Text="Desenvolvedora" FontSize="11" TextColor="{StaticResource Muted}"/>
+                            <Label Text="Keyla Rosado" FontSize="16" FontFamily="OpenSansSemibold"/>
+                        </VerticalStackLayout>
+                    </Grid>
+                    <BoxView HeightRequest="1" Color="#EEEAE2"/>
+                    <Grid ColumnDefinitions="Auto,*" ColumnSpacing="14">
+                        <Label Text="◷" FontSize="22" TextColor="{StaticResource Clay}"/>
+                        <VerticalStackLayout Grid.Column="1" Spacing="2">
+                            <Label Text="Ano de desenvolvimento" FontSize="11" TextColor="{StaticResource Muted}"/>
+                            <Label Text="2026" FontSize="16" FontFamily="OpenSansSemibold"/>
+                        </VerticalStackLayout>
+                    </Grid>
+                    <BoxView HeightRequest="1" Color="#EEEAE2"/>
+                    <Grid ColumnDefinitions="Auto,*" ColumnSpacing="14">
+                        <Label Text="⌘" FontSize="22" TextColor="{StaticResource Clay}"/>
+                        <VerticalStackLayout Grid.Column="1" Spacing="2">
+                            <Label Text="Tecnologia" FontSize="11" TextColor="{StaticResource Muted}"/>
+                            <Label Text=".NET MAUI • C# • XAML" FontSize="15" FontFamily="OpenSansSemibold"/>
+                        </VerticalStackLayout>
+                    </Grid>
+                </VerticalStackLayout>
+            </Border>
+            <Label Text="Recursos explorados" FontSize="18" FontFamily="OpenSansSemibold"
+                   HorizontalTextAlignment="Start"/>
+            <Label Text="• Componentes Stepper, DatePicker e Picker\n• Data Binding e BindingContext\n• Navegação entre páginas\n• Layout responsivo com XAML"
+                   FontSize="13" TextColor="{StaticResource Muted}"
+                   HorizontalTextAlignment="Start" LineHeight="1.5"/>
+            <Label Text="Projeto acadêmico desenvolvido como atividade da Agenda 13 — Programação Mobile I."
+                   FontSize="11" TextColor="{StaticResource Muted}"/>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

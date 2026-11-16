@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiAppHotel.Views.HospedagemContratada"
+             Title="Resumo da reserva" BackgroundColor="{StaticResource Sand}">
+    <ScrollView>
+        <VerticalStackLayout Padding="24,35" Spacing="18">
+            <Label Text="✓" FontSize="54" TextColor="{StaticResource Forest}"/>
+            <Label Text="Tudo pronto para\nsua próxima pausa!" FontSize="27"
+                   FontFamily="OpenSansSemibold"/>
+            <Label Text="Confira os detalhes da sua solicitação de hospedagem."
+                   FontSize="13" TextColor="{StaticResource Muted}"/>
+            <Border BackgroundColor="White" Stroke="#E8E3D9" StrokeThickness="1"
+                    Padding="20" StrokeShape="RoundRectangle 20">
+                <VerticalStackLayout Spacing="13">
+                    <Label Text="RESUMO DA RESERVA" FontSize="11" CharacterSpacing="1.3"
+                           TextColor="{StaticResource Forest}"/>
+                    <Label Text="{Binding Acomodacao}" FontSize="20" FontFamily="OpenSansSemibold"/>
+                    <Grid ColumnDefinitions="*,Auto">
+                        <Label Text="Hóspedes"/>
+                        <Label Grid.Column="1" Text="{Binding Hospedes}"/>
+                    </Grid>
+                    <Grid ColumnDefinitions="*,Auto">
+                        <Label Text="Check-in"/>
+                        <Label Grid.Column="1" Text="{Binding Checkin, StringFormat='{0:dd/MM/yyyy}'}"/>
+                    </Grid>
+                    <Grid ColumnDefinitions="*,Auto">
+                        <Label Text="Check-out"/>
+                        <Label Grid.Column="1" Text="{Binding Checkout, StringFormat='{0:dd/MM/yyyy}'}"/>
+                    </Grid>
+                    <Grid ColumnDefinitions="*,Auto">
+                        <Label Text="Noites"/>
+                        <Label Grid.Column="1" Text="{Binding Noites}"/>
+                    </Grid>
+                    <BoxView HeightRequest="1" Color="#EEEAE2"/>
+                    <Grid ColumnDefinitions="*,Auto">
+                        <Label Text="Total estimado" FontFamily="OpenSansSemibold"/>
+                        <Label Grid.Column="1" Text="{Binding Total, StringFormat='R$ {0:N2}'}"
+                               FontFamily="OpenSansSemibold" TextColor="{StaticResource Forest}"/>
+                    </Grid>
+                </VerticalStackLayout>
+            </Border>
+            <Label Text="Esta é uma simulação acadêmica. Nenhuma cobrança ou reserva real foi realizada."
+                   FontSize="11" TextColor="{StaticResource Muted}"/>
+            <Button Text="Voltar ao início" BackgroundColor="{StaticResource Forest}"
+                    TextColor="White" Clicked="OnInicioClicked"/>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

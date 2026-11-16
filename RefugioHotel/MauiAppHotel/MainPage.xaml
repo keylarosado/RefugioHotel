@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiAppHotel.MainPage"
+             Shell.NavBarIsVisible="False"
+             BackgroundColor="{StaticResource Sand}">
+    <ScrollView>
+        <VerticalStackLayout Spacing="0">
+            <Grid HeightRequest="300">
+                <Image Source="hotel_lobby.svg" Aspect="AspectFill" />
+                <BoxView Color="#6620332F" />
+                <VerticalStackLayout Padding="26,34" Spacing="12" VerticalOptions="End">
+                    <Label Text="REFÚGIO • HOTEL &amp; EXPERIÊNCIAS"
+                           TextColor="#F4E9D8" FontSize="11" CharacterSpacing="2"
+                           HorizontalTextAlignment="Start" />
+                    <Label Text="Sua pausa,\nperto do que importa."
+                           TextColor="White" FontSize="32" FontFamily="OpenSansSemibold"
+                           HorizontalTextAlignment="Start" LineHeight="1.1" />
+                    <Label Text="Conforto, tranquilidade e uma estadia feita no seu ritmo."
+                           TextColor="#F4E9D8" FontSize="13"
+                           HorizontalTextAlignment="Start" />
+                </VerticalStackLayout>
+            </Grid>
+
+            <VerticalStackLayout Padding="24,26,24,30" Spacing="18">
+                <VerticalStackLayout Spacing="5">
+                    <Label Text="Bem-vindo ao Refúgio" FontSize="23"
+                           FontFamily="OpenSansSemibold" HorizontalTextAlignment="Start"/>
+                    <Label Text="Um lugar para desacelerar e aproveitar cada momento."
+                           TextColor="{StaticResource Muted}" FontSize="13"
+                           HorizontalTextAlignment="Start"/>
+                </VerticalStackLayout>
+
+                <Grid ColumnDefinitions="*,*" ColumnSpacing="12">
+                    <Border Grid.Column="0" BackgroundColor="White" Stroke="#E8E3D9"
+                            StrokeThickness="1" Padding="15" StrokeShape="RoundRectangle 18">
+                        <VerticalStackLayout Spacing="7">
+                            <Label Text="⌂" FontSize="25" TextColor="{StaticResource Clay}" HorizontalTextAlignment="Start"/>
+                            <Label Text="Acomodações" FontSize="14" FontFamily="OpenSansSemibold" HorizontalTextAlignment="Start"/>
+                            <Label Text="Suítes pensadas para seu descanso." FontSize="11" TextColor="{StaticResource Muted}" HorizontalTextAlignment="Start"/>
+                        </VerticalStackLayout>
+                    </Border>
+                    <Border Grid.Column="1" BackgroundColor="White" Stroke="#E8E3D9"
+                            StrokeThickness="1" Padding="15" StrokeShape="RoundRectangle 18">
+                        <VerticalStackLayout Spacing="7">
+                            <Label Text="✧" FontSize="25" TextColor="{StaticResource Clay}" HorizontalTextAlignment="Start"/>
+                            <Label Text="Experiência" FontSize="14" FontFamily="OpenSansSemibold" HorizontalTextAlignment="Start"/>
+                            <Label Text="Hospitalidade em cada detalhe." FontSize="11" TextColor="{StaticResource Muted}" HorizontalTextAlignment="Start"/>
+                        </VerticalStackLayout>
+                    </Border>
+                </Grid>
+
+                <Border BackgroundColor="#E6EDE5" StrokeThickness="0" Padding="18"
+                        StrokeShape="RoundRectangle 18">
+                    <VerticalStackLayout Spacing="8">
+                        <Label Text="PRONTO PARA SUA PRÓXIMA VIAGEM?"
+                               FontSize="10" CharacterSpacing="1.3"
+                               TextColor="{StaticResource Forest}" HorizontalTextAlignment="Start"/>
+                        <Label Text="Encontre sua próxima estadia."
+                               FontSize="19" FontFamily="OpenSansSemibold"
+                               HorizontalTextAlignment="Start"/>
+                        <Button Text="Planejar hospedagem  →"
+                                BackgroundColor="{StaticResource Forest}" TextColor="White"
+                                Clicked="OnReserveClicked"/>
+                    </VerticalStackLayout>
+                </Border>
+                <Label Text="REFÚGIO HOTEL  •  HOSPITALIDADE COM ESSÊNCIA"
+                       FontSize="9" CharacterSpacing="1" TextColor="{StaticResource Muted}"/>
+            </VerticalStackLayout>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

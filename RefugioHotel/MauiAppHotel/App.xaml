@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Application xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiAppHotel.App">
+    <Application.Resources>
+        <ResourceDictionary>
+            <Color x:Key="Ink">#20332F</Color>
+            <Color x:Key="Forest">#315B4B</Color>
+            <Color x:Key="Sage">#DCE7DD</Color>
+            <Color x:Key="Sand">#F5F2EC</Color>
+            <Color x:Key="Clay">#C88762</Color>
+            <Color x:Key="Muted">#718078</Color>
+            <Style TargetType="Label">
+                <Setter Property="TextColor" Value="{StaticResource Ink}" />
+                <Setter Property="FontFamily" Value="OpenSansRegular" />
+            </Style>
+            <Style TargetType="Button">
+                <Setter Property="CornerRadius" Value="14" />
+                <Setter Property="FontFamily" Value="OpenSansSemibold" />
+                <Setter Property="Padding" Value="18,13" />
+            </Style>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
